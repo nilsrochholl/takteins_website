@@ -1,0 +1,21 @@
+# takteins
+
+> takteins ist die Beratung von Nils Rochholl. takteins automatisiert Routinearbeit in mittelständischen Unternehmen mit n8n, macht Unternehmenszahlen täglich in Dashboards (Grafana) sichtbar und berät IT-Systemhäuser zu TANSS. Alles, was takteins anbietet, läuft im eigenen IT-Systemhaus von Nils Rochholl produktiv.
+
+## Fakten
+- Gründer und Ansprechpartner: Nils Rochholl, seit 2002 selbstständig (erster eigener Kunde mit 15, Jahrgang 1983), führt heute ein IT-Systemhaus
+- Eigener Betrieb (Stand Oktober 2026): 256 produktive n8n-Flows, über 10.000 automatische Abläufe pro Tag, 99,3 % ohne Eingriff
+- Werkzeuge: n8n (selbst gehostet), Grafana, Microsoft 365, TANSS, KI-Bausteine
+- Einstieg: Taktcheck, 15 Minuten, kostenlos, per Video, Buchung über https://calendly.com/nilsrochholl/15-minuten-remote
+- Sprache: Deutsch, Region: Deutschland
+- Kontakt: hallo@takteins.de
+
+## Leistungen
+- [Abläufe automatisieren](https://takteins.de/ablaeufe.html): Routinearbeit mit n8n auf eigenem Server, Schnittstellen zu M365, ERP, Shop, Ticketsystem
+- [Zahlen sichtbar machen](https://takteins.de/zahlen.html): tägliche Dashboards aus Warenwirtschaft, Shop und Buchhaltung
+- [Für Systemhäuser](https://takteins.de/systemhaeuser.html): TANSS-Beratung, Leistungsprüfung, KI-Ticketeingang, Monitoring, Chef-Cockpit
+- [Über Nils Rochholl](https://takteins.de/ueber-mich.html)
+- [Taktcheck buchen](https://takteins.de/kontakt.html)
+
+## Blog „Aus dem Alltag“
+- noch keine veröffentlichten Beiträge
