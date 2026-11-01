@@ -125,7 +125,7 @@
         var rand = Math.min(48, window.innerWidth * 0.05);
         b.style.setProperty('--bi', (rand * (1 - auf)).toFixed(1) + 'px');
         b.style.setProperty('--br', (22 * (1 - auf)).toFixed(1) + 'px');
-        b.style.setProperty('--bz', (1.16 - 0.16 * durch).toFixed(4));
+        b.style.setProperty('--bz', (1.06 - 0.06 * durch).toFixed(4));
         if (auf > 0.55) b.classList.add('da');
       });
       document.querySelectorAll('[data-parallax]').forEach(function(img){
