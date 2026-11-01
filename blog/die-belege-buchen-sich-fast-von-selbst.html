@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buchhaltung automatisieren im Mittelstand | takteins · takteins</title>
+<meta name="description" content="Wie wir mit n8n Eingangsrechnungen zur Freigabe vorlegen, per KI Buchungsvorschläge machen und in SAP buchen – mit 561 Knoten, 99 % Erfolgsquote und Menschen, die freigeben.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffffff'/%3E%3Ctext x='16' y='15' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%230E0C12'%3E1%3C/text%3E%3Ctext x='16' y='28' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%233C005F'%3E1%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="takteins · Aus dem Alltag" href="../feed.xml">
+<link rel="canonical" href="https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="takteins">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Buchhaltung automatisieren im Mittelstand | takteins · takteins">
+<meta property="og:description" content="Wie wir mit n8n Eingangsrechnungen zur Freigabe vorlegen, per KI Buchungsvorschläge machen und in SAP buchen – mit 561 Knoten, 99 % Erfolgsquote und Menschen, die freigeben.">
+<meta property="og:url" content="https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html">
+<meta property="og:image" content="https://takteins.de/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["ProfessionalService", "Organization"], "@id": "https://takteins.de/#takteins", "name": "takteins", "address": {"@type": "PostalAddress", "streetAddress": "Am Wickrather Tor 61", "postalCode": "41179", "addressLocality": "Mönchengladbach", "addressCountry": "DE"}, "url": "https://takteins.de/", "logo": "https://takteins.de/img/og.jpg", "image": "https://takteins.de/img/og.jpg", "email": "hallo@takteins.de", "description": "takteins automatisiert Routinearbeit mit n8n, macht Unternehmenszahlen täglich in Dashboards sichtbar und berät IT-Systemhäuser zu TANSS.", "slogan": "Ihr Betrieb läuft. Auch wenn Sie nicht hinschauen.", "founder": {"@id": "https://takteins.de/#nils"}, "areaServed": {"@type": "Country", "name": "Deutschland"}, "inLanguage": "de", "knowsAbout": ["Prozessautomatisierung", "n8n", "Dashboards", "Grafana", "Kennzahlen", "TANSS", "IT-Systemhaus", "Microsoft 365", "KI im Mittelstand"], "makesOffer": [{"@type": "Offer", "name": "Taktcheck", "description": "15 Minuten, kostenlos, per Video: wo Sie Zeit verlieren, was sich automatisieren lässt, was es kostet.", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Auftakt", "description": "Bestandsaufnahme und Plan mit Festpreis je Baustein."}, {"@type": "Offer", "name": "Im Takt", "description": "Umsetzung von Automatisierungen (n8n), Dashboards (Grafana) und TANSS-Bausteinen, Festpreis je Baustein."}, {"@type": "Offer", "name": "Dauerhaft im Takt", "description": "Monatliche Betreuung: Betrieb, Monitoring, Sicherung, Weiterentwicklung."}]}, {"@type": "Person", "@id": "https://takteins.de/#nils", "name": "Nils Rochholl", "jobTitle": "Gründer von takteins", "birthDate": "1983", "image": "https://takteins.de/img/nils.jpg", "worksFor": {"@id": "https://takteins.de/#takteins"}, "knowsAbout": ["n8n", "TANSS", "IT-Systemhaus", "Automatisierung", "Grafana"]}, {"@type": "WebSite", "@id": "https://takteins.de/#website", "url": "https://takteins.de/", "name": "takteins", "inLanguage": "de", "publisher": {"@id": "https://takteins.de/#takteins"}}, {"@type": "WebPage", "@id": "https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html", "url": "https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html", "name": "Buchhaltung automatisieren im Mittelstand | takteins · takteins", "description": "Wie wir mit n8n Eingangsrechnungen zur Freigabe vorlegen, per KI Buchungsvorschläge machen und in SAP buchen – mit 561 Knoten, 99 % Erfolgsquote und Menschen, die freigeben.", "inLanguage": "de", "isPartOf": {"@id": "https://takteins.de/#website"}, "about": {"@id": "https://takteins.de/#takteins"}}, {"@type": "BlogPosting", "@id": "https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html#beitrag", "headline": "Die Belege buchen sich fast von selbst", "description": "Belege suchen, zur Freigabe schicken, nachfragen, kontieren, in SAP abtippen. Bei uns hat sich das in einem Jahr komplett verändert – mit einem Flow, der inzwischen größer ist als alle anderen.", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "inLanguage": "de", "author": {"@id": "https://takteins.de/#nils"}, "publisher": {"@id": "https://takteins.de/#takteins"}, "mainEntityOfPage": "https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html", "image": "https://takteins.de/img/blog-buchhaltung.jpg", "articleSection": "Aus dem Alltag", "wordCount": 660, "timeRequired": "PT3M", "alternativeHeadline": "Buchhaltung automatisieren im Mittelstand – Belegfreigabe, Buchungsvorschlag und SAP", "keywords": "Buchhaltung automatisieren, Belegfreigabe automatisieren, Eingangsrechnungen buchen, SAP Business One Automatisierung"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://takteins.de/"}, {"@type": "ListItem", "position": 2, "name": "Aus dem Alltag", "item": "https://takteins.de/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Die Belege buchen sich fast von selbst", "item": "https://takteins.de/blog/die-belege-buchen-sich-fast-von-selbst.html"}]}]}</script>
+</head>
+<body>
+<header class="site band"><div class="wrap"><a class="logo" href="../" aria-label="takteins Startseite"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button><nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><a href="../">Start</a><a href="../prozesse.html">Prozesse</a><a href="../zahlen.html">Zahlen</a><a href="../systemhaeuser.html">Systemhäuser</a><a href="../blog.html" aria-current="page">Aus dem Alltag</a><a href="../ueber-mich.html">Über mich</a><a class="cta" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></nav></div></header>
+<main id="top">
+<article class="band"><div class="narrow article-head">
+  <div class="meta"><span class="tag">Aus dem Alltag</span><span>26. Oktober 2026</span><span>3 Min. Lesezeit</span></div><p class="bildtitel">Die Belege buchen sich fast von selbst</p><h1>Buchhaltung automatisieren im Mittelstand – Belegfreigabe, Buchungsvorschlag und SAP</h1><p class="lead">Belege suchen, zur Freigabe schicken, nachfragen, kontieren, in SAP abtippen. Bei uns hat sich das in einem Jahr komplett verändert – mit einem Flow, der inzwischen größer ist als alle anderen.</p>
+  <aside class="tldr"><b>Kurz gesagt</b><p>In der Buchhaltung steckt viel Routine, die niemand gern macht. Bei uns übernimmt ein n8n-Flow mit 561 Knoten und 8 KI-Bausteinen die Fleißarbeit. Er erinnert werktags um 7:30 Uhr an offene Freigaben, schlägt Buchungstext und Kontierung vor, liest Kontoauszüge ein und legt Belege in SAP an. Freigeben und buchen tun weiterhin Menschen, aber mit einem Klick statt mit fünf Programmen.</p></aside>
+</div>
+<div class="wrap"><figure class="shot r21"><img src="../img/blog-buchhaltung.webp" fetchpriority="high" decoding="async" class="on" alt="Nils Rochholl am Laptop in einer Lounge"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure></div>
+<div class="narrow prose" style="padding-block:2rem 1rem"><p>Ich muss gestehen: Buchhaltung war bei uns lange das Thema, über das niemand gern geredet hat. Nicht, weil es schlecht lief. Sondern weil es so viel Kleinkram war. Beleg suchen, Freigabe einholen, nachfragen, kontieren, in SAP abtippen. Jeden Tag ein bisschen. Und am Monatsende dann viel.</p>
+<h2>Einleitung: Fünf Programme für eine Rechnung</h2>
+<p>Eine einzige Eingangsrechnung ging bei uns früher durch erstaunlich viele Hände und Programme: Mailpostfach, Belegportal, Freigabe per Mail, SAP-Client, Excel für Sonderfälle. Jeder Schritt für sich ist kurz. Zusammen ist es eine Kette, die an jeder Stelle hängen bleiben kann.</p>
+<h2>Was heißt „Buchhaltung automatisieren“ – und wo fängt man an?</h2>
+<p>Buchhaltung automatisieren heißt nicht, dass niemand mehr hinschaut. Es heißt, dass die <strong>Fleißarbeit zwischen den Entscheidungen</strong> wegfällt:</p>
+<ul>
+<li>Belege werden automatisch gesammelt und der richtigen Person vorgelegt.</li>
+<li>Für jeden Beleg gibt es einen <strong>Vorschlag</strong>: Konto, Kostenstelle, Buchungstext.</li>
+<li>Was freigegeben ist, landet ohne Abtippen in der Buchhaltung.</li>
+<li>Kontoauszüge und Kartenabrechnungen werden eingelesen, statt sie von Hand zu übertragen.</li>
+</ul>
+<p>Anfangen sollte man dort, wo es am häufigsten hakt. Bei uns war das die Freigabe.</p>
+<h2>So machen wir es: ein Cockpit statt fünf Programmen</h2>
+<figure class="flowshot"><button type="button" class="lupe-auf" aria-label="Bild vergrößern"><img src="../img/n8n-beleg.webp" loading="lazy" decoding="async" class="on" alt="Zwei von 47 Teilstrecken unseres Buchhaltungs-Flows: oben der KI-Buchungsvorschlag, unten die tägliche Erinnerung an offene Freigaben."></button><figcaption>Zwei von 47 Teilstrecken unseres Buchhaltungs-Flows: oben der KI-Buchungsvorschlag, unten die tägliche Erinnerung an offene Freigaben.<span>Zum Vergrößern klicken</span></figcaption></figure>
+<p>Hinter unserem Buchhaltungs-Cockpit steckt ein einziger n8n-Flow. Er ist mit <strong>561 Knoten in 47 Teilstrecken</strong> inzwischen unser größter. Er ist nicht so geplant worden, er ist gewachsen. Jedes Mal, wenn wir eine Handarbeit gefunden haben, kam eine Teilstrecke dazu.</p>
+<p>Ein paar Beispiele aus dem Alltag:</p>
+<ol>
+<li><strong>Werktags um 7:30 Uhr</strong> bekommt jede Person, bei der Belege zur Freigabe liegen, eine kurze Nachricht in Teams. Keine Liste per Mail, sondern ein Link ins Cockpit.</li>
+<li><strong>Buchungsvorschlag per KI:</strong> Die KI liest die letzten Rechnungen desselben Lieferanten und die Kostenstellen und schlägt Konto und Buchungstext vor. Der Mensch prüft und übernimmt mit einem Klick – oder eben nicht.</li>
+<li><strong>Buchen in SAP</strong> ohne SAP-Client: Eingangsrechnungen, Bestellungen und Kontoauszüge werden direkt angelegt.</li>
+<li><strong>Sonderfälle,</strong> die früher Nerven gekostet haben: Kreditkartenabrechnungen abgleichen, Bewirtungsbelege 70/30 aufteilen, Rückfragen an Lieferanten mit Ticket und Mail.</li>
+</ol>
+<p>Die Erfolgsquote der Läufe liegt bei rund 99 Prozent. Für jede dieser Handarbeiten messen wir an 32 Stellen mit, wie viel Zeit gespart wird. So wissen wir, welche Teilstrecke sich wirklich lohnt.</p>
+<h2>Drei Praxistipps für Ihre Buchhaltung</h2>
+<ol>
+<li><strong>Beginnen Sie mit der Freigabe.</strong> Wenn Belege schneller freigegeben werden, wird alles danach leichter. Eine tägliche Erinnerung mit einem Klick bringt oft mehr als jedes neue Programm.</li>
+<li><strong>Vorschlagen, nicht entscheiden.</strong> Die KI ist richtig gut darin, aus früheren Buchungen einen Vorschlag zu machen. Die Verantwortung bleibt bei der Buchhaltung, und das ist auch gut so.</li>
+<li><strong>Bauen Sie in Teilstücken.</strong> Niemand muss 561 Knoten auf einmal planen. Eine Strecke pro Handarbeit, sauber getestet, dann die nächste.</li>
+</ol>
+<h2>Was passiert, wenn Sie nichts tun?</h2>
+<ul>
+<li><strong>Wirtschaftlich:</strong> Skonto verfällt, Mahnungen kommen, und die Buchhaltung braucht mehr Leute, als nötig wären.</li>
+<li><strong>Rechtlich:</strong> Je mehr von Hand passiert, desto schwerer ist der Weg eines Belegs nachvollziehbar – bei der nächsten Prüfung zählt genau das.</li>
+<li><strong>Im Team:</strong> Gute Leute verbringen ihre Zeit mit Abtippen statt mit dem, was sie können.</li>
+</ul>
+<h2>Häufige Fragen</h2>
+<details><summary>Bucht die KI selbst?</summary><p>Nein. Sie schlägt Konto, Kostenstelle und Buchungstext vor. Freigeben und buchen tut ein Mensch, mit einem Klick statt mit Abtippen.</p></details>
+<details><summary>Muss ich SAP haben?</summary><p>Wir nutzen SAP Business One, weil es bei uns im Einsatz ist. Das Prinzip passt auf jede Buchhaltung mit Schnittstelle. Der Aufwand hängt davon ab, was diese Schnittstelle kann.</p></details>
+<details><summary>Ist das prüfungssicher?</summary><p>Jede Entscheidung wird protokolliert: wer wann was freigegeben hat und welcher Vorschlag übernommen wurde. Das macht den Weg eines Belegs nachvollziehbarer als vorher.</p></details>
+
+<h2>Fazit</h2>
+<p>Unsere Belege buchen sich nicht von selbst. Aber fast. Die Maschine sammelt, schlägt vor und tippt ab. Die Menschen geben frei und entscheiden. Und niemand muss mehr fünf Programme öffnen, um eine Rechnung zu bezahlen.</p>
+<p>Wenn Ihre Buchhaltung auch noch viel tippt: Im Taktcheck finden wir die Stelle, an der es am meisten hakt – und wie schnell sie sich lösen lässt.</p></div>
+<div class="narrow" style="padding-bottom:4rem">
+  <div class="author"><figure class="shot "><img src="../img/nils.webp" loading="lazy" decoding="async" class="on" alt="Nils Rochholl"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure><p><b>Nils Rochholl</b> automatisiert Prozesse für Unternehmen und Systemhäuser. Fragen zum Beitrag? Schreiben Sie mir: hallo@takteins.de</p></div>
+  <div class="post-nav"><a class="more" href="liquiditaet-um-7-statt-am-monatsende.html">Älterer Beitrag</a><a class="more" href="../blog.html">Alle Beiträge</a></div>
+</div></article>
+<section class="band petrol cta-band" id="taktcheck"><div class="wrap">
+  <div><p class="eyebrow" style="margin-bottom:1rem">Taktcheck</p><h2>15 Minuten, die sich lohnen.</h2></div>
+  <div class="card" style="border-top-color:var(--on-petrol)">
+    <p>Nach unserem Gespräch wissen Sie, wo Sie Zeit verlieren, was sich automatisieren lässt und was es ungefähr kostet. Oder ich sage Ihnen ehrlich, dass es sich nicht lohnt.</p>
+    <ul class="promise"><li>kostenlos, per Video</li><li>ohne Vorbereitung</li><li>kein Verkaufsgespräch</li><li>mit kurzer Notiz danach</li></ul>
+    <div class="cta-row"><a class="btn" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a><a class="more" style="color:var(--on-petrol)" href="../kontakt.html">So läuft der Taktcheck ab</a></div>
+  </div>
+</div></section>
+</main>
+<footer class="site band"><div class="wrap">
+  <div class="brand"><a class="logo" href="../"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><p class="claim">Damit Ihr Betrieb läuft, auch wenn Sie nicht hinschauen.</p></div>
+  <div><h4>Was wir machen</h4><ul><li><a href="../prozesse.html">Prozesse automatisieren</a></li><li><a href="../zahlen.html">Zahlen sichtbar machen</a></li><li><a href="../systemhaeuser.html">Für Systemhäuser</a></li></ul></div>
+  <div><h4>takteins</h4><ul><li><a href="../blog.html">Aus dem Alltag</a></li><li><a href="../ueber-mich.html">Über mich</a></li><li><a href="../kontakt.html">Kontakt</a></li></ul></div>
+  <div><h4>Kontakt</h4><ul><li>hallo@takteins.de</li><li><a href="../impressum.html">Impressum</a></li><li><a href="../datenschutz.html">Datenschutz</a></li></ul></div>
+  <div class="bottom"><span>© 2026 takteins · Nils Rochholl</span><span>Prozesse · Zahlen · TANSS</span></div>
+</div></footer>
+<div class="sticky-cta"><span>15 Min · kostenlos</span><a class="btn" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

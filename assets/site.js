@@ -19,6 +19,20 @@
     });
   });
 
+
+  // Flow-Screenshots vergrößern (Lupe)
+  document.querySelectorAll('.lupe-auf').forEach(function(b){
+    b.addEventListener('click',function(){
+      var img=b.querySelector('img'), d=document.createElement('dialog'); d.className='lupe';
+      d.innerHTML='<button class="zu" type="button">Schließen</button>';
+      var i=new Image(); i.src=img.currentSrc||img.src; i.alt=img.alt; d.appendChild(i);
+      document.body.appendChild(d); d.showModal();
+      function zu(){ d.close(); d.remove(); }
+      d.querySelector('.zu').addEventListener('click',zu); d.addEventListener('cancel',function(e){e.preventDefault();zu();});
+      i.addEventListener('click',zu);
+    });
+  });
+
   // Blog-Filter nach Rubrik
   var chips=document.querySelectorAll('.chip[data-filter]');
   chips.forEach(function(c){

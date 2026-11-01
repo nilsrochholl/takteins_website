@@ -747,3 +747,19 @@ nav.main a.cta:hover{background:#4F196F}
 .page-hero.solo h1{max-width:16ch}
 .page-hero.solo .lead{max-width:56ch}
 .person.solo{grid-template-columns:minmax(0,1fr);max-width:860px}
+
+/* ===== Blogbeitrag: Bildtitel, Kurz gesagt, Flow-Screenshots ===== */
+.article-head .bildtitel{font-family:var(--f-display);font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);color:var(--lila);margin:1.2rem 0 .4rem;letter-spacing:-.01em}
+.tldr{margin-top:1.6rem;padding:1.2rem 1.4rem;border-left:3px solid var(--lila);background:var(--lila-pale);border-radius:0 10px 10px 0}
+.tldr b{display:block;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lila);margin-bottom:.4rem;font-weight:500}
+.tldr p{margin:0;color:var(--text)}
+.flowshot{margin:2.2rem 0;width:min(100vw - 40px,1100px);margin-left:50%;transform:translateX(-50%)}
+.flowshot .lupe-auf{display:block;width:100%;padding:0;border:1px solid var(--rule-dark);border-radius:12px;overflow:hidden;background:#1f1f24;cursor:zoom-in}
+.flowshot img{display:block;width:100%;height:auto;opacity:1}
+.flowshot figcaption{display:flex;justify-content:space-between;gap:1rem;font-size:.9rem;color:var(--soft);margin-top:.7rem}
+.flowshot figcaption span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+dialog.lupe{width:100vw;height:100svh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(14,12,18,.96);overflow:auto}
+dialog.lupe::backdrop{background:rgba(14,12,18,.8)}
+dialog.lupe img{display:block;max-width:none;width:max(100%,1800px);height:auto;margin:auto}
+dialog.lupe .zu{position:fixed;top:16px;right:16px;z-index:2;background:#fff;color:var(--ink);border:0;border-radius:999px;padding:.6rem 1rem;font:inherit;cursor:pointer}
+@media (max-width:700px){.flowshot figcaption{flex-direction:column;gap:.2rem}}

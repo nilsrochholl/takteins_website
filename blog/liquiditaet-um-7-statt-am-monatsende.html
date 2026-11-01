@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liquiditätsvorschau automatisieren | takteins · takteins</title>
+<meta name="description" content="Wie ein n8n-Flow jeden Montag um 6:45 Uhr Daten aus SAP und Bankumsätzen zusammenführt und eine Liquiditätsvorschau schreibt. Mit Probelauf, Freigabe und echtem Flow.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffffff'/%3E%3Ctext x='16' y='15' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%230E0C12'%3E1%3C/text%3E%3Ctext x='16' y='28' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%233C005F'%3E1%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="takteins · Aus dem Alltag" href="../feed.xml">
+<link rel="canonical" href="https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="takteins">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Liquiditätsvorschau automatisieren | takteins · takteins">
+<meta property="og:description" content="Wie ein n8n-Flow jeden Montag um 6:45 Uhr Daten aus SAP und Bankumsätzen zusammenführt und eine Liquiditätsvorschau schreibt. Mit Probelauf, Freigabe und echtem Flow.">
+<meta property="og:url" content="https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html">
+<meta property="og:image" content="https://takteins.de/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["ProfessionalService", "Organization"], "@id": "https://takteins.de/#takteins", "name": "takteins", "address": {"@type": "PostalAddress", "streetAddress": "Am Wickrather Tor 61", "postalCode": "41179", "addressLocality": "Mönchengladbach", "addressCountry": "DE"}, "url": "https://takteins.de/", "logo": "https://takteins.de/img/og.jpg", "image": "https://takteins.de/img/og.jpg", "email": "hallo@takteins.de", "description": "takteins automatisiert Routinearbeit mit n8n, macht Unternehmenszahlen täglich in Dashboards sichtbar und berät IT-Systemhäuser zu TANSS.", "slogan": "Ihr Betrieb läuft. Auch wenn Sie nicht hinschauen.", "founder": {"@id": "https://takteins.de/#nils"}, "areaServed": {"@type": "Country", "name": "Deutschland"}, "inLanguage": "de", "knowsAbout": ["Prozessautomatisierung", "n8n", "Dashboards", "Grafana", "Kennzahlen", "TANSS", "IT-Systemhaus", "Microsoft 365", "KI im Mittelstand"], "makesOffer": [{"@type": "Offer", "name": "Taktcheck", "description": "15 Minuten, kostenlos, per Video: wo Sie Zeit verlieren, was sich automatisieren lässt, was es kostet.", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Auftakt", "description": "Bestandsaufnahme und Plan mit Festpreis je Baustein."}, {"@type": "Offer", "name": "Im Takt", "description": "Umsetzung von Automatisierungen (n8n), Dashboards (Grafana) und TANSS-Bausteinen, Festpreis je Baustein."}, {"@type": "Offer", "name": "Dauerhaft im Takt", "description": "Monatliche Betreuung: Betrieb, Monitoring, Sicherung, Weiterentwicklung."}]}, {"@type": "Person", "@id": "https://takteins.de/#nils", "name": "Nils Rochholl", "jobTitle": "Gründer von takteins", "birthDate": "1983", "image": "https://takteins.de/img/nils.jpg", "worksFor": {"@id": "https://takteins.de/#takteins"}, "knowsAbout": ["n8n", "TANSS", "IT-Systemhaus", "Automatisierung", "Grafana"]}, {"@type": "WebSite", "@id": "https://takteins.de/#website", "url": "https://takteins.de/", "name": "takteins", "inLanguage": "de", "publisher": {"@id": "https://takteins.de/#takteins"}}, {"@type": "WebPage", "@id": "https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html", "url": "https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html", "name": "Liquiditätsvorschau automatisieren | takteins · takteins", "description": "Wie ein n8n-Flow jeden Montag um 6:45 Uhr Daten aus SAP und Bankumsätzen zusammenführt und eine Liquiditätsvorschau schreibt. Mit Probelauf, Freigabe und echtem Flow.", "inLanguage": "de", "isPartOf": {"@id": "https://takteins.de/#website"}, "about": {"@id": "https://takteins.de/#takteins"}}, {"@type": "BlogPosting", "@id": "https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html#beitrag", "headline": "Liquidität um 7 Uhr statt am Monatsende", "description": "Die Frage „Wie sieht es in sechs Wochen auf dem Konto aus?“ hat bei uns früher einen halben Vormittag gekostet. Heute liegt die Antwort jeden Montag vor dem ersten Termin bereit.", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "inLanguage": "de", "author": {"@id": "https://takteins.de/#nils"}, "publisher": {"@id": "https://takteins.de/#takteins"}, "mainEntityOfPage": "https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html", "image": "https://takteins.de/img/blog-liquiditaet.jpg", "articleSection": "Zahlen", "wordCount": 626, "timeRequired": "PT3M", "alternativeHeadline": "Liquiditätsvorschau automatisieren – jeden Montag fortgeschrieben, ohne Excel", "keywords": "Liquiditätsvorschau automatisieren, Liquiditätsplanung Mittelstand, Cashflow Vorschau, Finanz-Dashboard"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://takteins.de/"}, {"@type": "ListItem", "position": 2, "name": "Aus dem Alltag", "item": "https://takteins.de/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Liquidität um 7 Uhr statt am Monatsende", "item": "https://takteins.de/blog/liquiditaet-um-7-statt-am-monatsende.html"}]}]}</script>
+</head>
+<body>
+<header class="site band"><div class="wrap"><a class="logo" href="../" aria-label="takteins Startseite"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button><nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><a href="../">Start</a><a href="../prozesse.html">Prozesse</a><a href="../zahlen.html">Zahlen</a><a href="../systemhaeuser.html">Systemhäuser</a><a href="../blog.html" aria-current="page">Aus dem Alltag</a><a href="../ueber-mich.html">Über mich</a><a class="cta" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></nav></div></header>
+<main id="top">
+<article class="band"><div class="narrow article-head">
+  <div class="meta"><span class="tag">Zahlen</span><span>22. Oktober 2026</span><span>3 Min. Lesezeit</span></div><p class="bildtitel">Liquidität um 7 Uhr statt am Monatsende</p><h1>Liquiditätsvorschau automatisieren – jeden Montag fortgeschrieben, ohne Excel</h1><p class="lead">Die Frage „Wie sieht es in sechs Wochen auf dem Konto aus?“ hat bei uns früher einen halben Vormittag gekostet. Heute liegt die Antwort jeden Montag vor dem ersten Termin bereit.</p>
+  <aside class="tldr"><b>Kurz gesagt</b><p>Eine Liquiditätsvorschau ist eines der wichtigsten Werkzeuge in jedem Betrieb – und wird trotzdem oft nur sporadisch gepflegt, weil sie Handarbeit ist. Bei uns schreibt ein n8n-Flow sie jeden Montag um 6:45 Uhr fort. Er liest offene Posten und Bankumsätze, rechnet die Vorschau, legt eine neue Fassung samt Bericht ab und informiert mich per Teams. Schreiben darf er nur, wenn es ausdrücklich gewollt ist.</p></aside>
+</div>
+<div class="wrap"><figure class="shot r21"><img src="../img/blog-liquiditaet.webp" fetchpriority="high" decoding="async" class="on" alt="Nils Rochholl steht in einer Bürotür"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure></div>
+<div class="narrow prose" style="padding-block:2rem 1rem"><p>Es gibt diese eine Frage, die sich jeder Unternehmer regelmäßig stellt: Wie sieht es in ein paar Wochen auf dem Konto aus? Bei uns hat die ehrliche Antwort darauf früher einen halben Vormittag gekostet. Also haben wir sie zu selten gestellt.</p>
+<h2>Einleitung: Wichtig, aber nie dringend</h2>
+<p>Die Liquiditätsplanung ist ein klassischer Kandidat für „mache ich, wenn Zeit ist“. Sie ist wichtig, aber selten dringend. Bis sie es plötzlich ist. Dann sitzt man mit Kontoauszügen, offenen Posten und einer alten Excel zusammen und versucht, in zwei Stunden nachzuholen, was man in zwei Monaten verpasst hat.</p>
+<h2>Was ist eine automatische Liquiditätsvorschau – und warum ist sie wichtig?</h2>
+<p>Eine Liquiditätsvorschau zeigt, wie sich der Kontostand in den nächsten Wochen voraussichtlich entwickelt. Sie verbindet drei Dinge:</p>
+<ul>
+<li><strong>Was kommt rein?</strong> Offene Forderungen und erwartete Zahlungen.</li>
+<li><strong>Was geht raus?</strong> Offene Verbindlichkeiten, Löhne, Steuern, feste Kosten.</li>
+<li><strong>Wo stehen wir heute?</strong> Der aktuelle Stand aller Bankkonten, inklusive Kreditlinien.</li>
+</ul>
+<p>Automatisch heißt: Diese drei Quellen werden regelmäßig zusammengeführt, ohne dass jemand kopiert. Der Wert liegt nicht in der einzelnen Vorschau, sondern in der <strong>Regelmäßigkeit</strong>. Wer jede Woche hinschaut, sieht Engpässe Wochen vorher. Wer einmal im Quartal hinschaut, sieht sie, wenn sie da sind.</p>
+<h2>So machen wir es: jeden Montag um 6:45 Uhr</h2>
+<figure class="flowshot"><button type="button" class="lupe-auf" aria-label="Bild vergrößern"><img src="../img/n8n-liquiditaet.webp" loading="lazy" decoding="async" class="on" alt="Der Flow „Liquiditätsvorschau“: 24 Knoten. Oben der Probelauf, in der Mitte das Fortschreiben, unten der Zugang aus dem Cockpit."></button><figcaption>Der Flow „Liquiditätsvorschau“: 24 Knoten. Oben der Probelauf, in der Mitte das Fortschreiben, unten der Zugang aus dem Cockpit.<span>Zum Vergrößern klicken</span></figcaption></figure>
+<p>Jeden <strong>Montag um 6:45 Uhr</strong> läuft der Flow los:</p>
+<ol>
+<li><strong>Daten lesen:</strong> offene Posten aus SAP und die Bankumsätze, dazu unsere Banklinien und die letzte Fassung der Vorschau.</li>
+<li><strong>Rechnen:</strong> Die Vorschau wird fortgeschrieben, nicht neu erfunden. So sieht man, was sich gegenüber letzter Woche verändert hat.</li>
+<li><strong>Ablegen:</strong> Eine neue Fassung wird gespeichert, der Bericht hängt daran und liegt zusätzlich in OneDrive.</li>
+<li><strong>Melden:</strong> Ich bekomme eine kurze Nachricht in Teams.</li>
+</ol>
+<p>Zwei Sicherungen waren mir wichtig. Erstens gibt es einen <strong>Probelauf</strong>: Der Flow rechnet alles, schreibt aber nichts. Erst wenn das Ergebnis plausibel ist, wird wirklich geschrieben. Zweitens prüft der Flow bei Abrufen aus unserem Cockpit, <strong>wer</strong> fragt. Finanzzahlen sieht nur, wer sie sehen darf.</p>
+<p>Für diesen Lauf haben wir eine Stunde Handarbeit pro Woche als Zeitgewinn hinterlegt. Ehrlich gesagt ist das eher vorsichtig gerechnet – früher ist es oft mehr geworden, weil ich zwischendurch gesucht habe, welche Zahl die richtige ist.</p>
+<h2>Drei Praxistipps für Ihre Liquiditätsplanung</h2>
+<ol>
+<li><strong>Fortschreiben statt neu bauen.</strong> Eine Vorschau, die jede Woche auf der letzten aufbaut, zeigt Veränderungen. Eine, die jedes Mal neu entsteht, zeigt nur einen Stand.</li>
+<li><strong>Probelauf vor Schreiben.</strong> Gerade bei Finanzdaten sollte eine Automation erst zeigen, was sie tun würde, bevor sie es tut.</li>
+<li><strong>Zugriff klar regeln.</strong> Wer automatisiert Zahlen verteilt, muss genauso klar regeln, wer sie sehen darf.</li>
+</ol>
+<h2>Was passiert, wenn Sie nichts tun?</h2>
+<ul>
+<li><strong>Wirtschaftlich:</strong> Engpässe fallen erst auf, wenn sie da sind. Dann bleiben nur teure Lösungen.</li>
+<li><strong>Gegenüber Bank und Steuerberatung:</strong> Eine gepflegte Vorschau schafft Vertrauen. Eine, die erst auf Nachfrage entsteht, eher nicht.</li>
+<li><strong>Für Sie persönlich:</strong> Die Unsicherheit bleibt im Hinterkopf. Und die kostet mehr Energie, als man denkt.</li>
+</ul>
+<h2>Häufige Fragen</h2>
+<details><summary>Ersetzt das meine Steuerberatung?</summary><p>Nein. Die Vorschau ist ein Werkzeug für Sie als Unternehmer. Die Steuerberatung bekommt dadurch aber bessere und aktuellere Zahlen.</p></details>
+<details><summary>Welche Systeme braucht man?</summary><p>Eine Buchhaltung mit offenen Posten und Zugang zu den Bankumsätzen. Bei uns sind das SAP Business One und SFirm. Andere Systeme funktionieren genauso, solange es eine Schnittstelle oder einen Export gibt.</p></details>
+<details><summary>Warum montags?</summary><p>Weil die Woche dann beginnt. Wer montags weiß, wie es aussieht, kann in der Woche noch reagieren.</p></details>
+
+<h2>Fazit</h2>
+<p>Eine Liquiditätsvorschau ist kein Hexenwerk. Sie ist Fleißarbeit – und Fleißarbeit kann eine Maschine besser. Bei uns liegt sie jeden Montag bereit, bevor der erste Termin beginnt.</p>
+<p>Wenn Sie Ihre Zahlen auch lieber regelmäßig sehen wollen statt zu spät: Im Taktcheck schauen wir, welche Quellen Sie haben und wie schnell daraus eine Vorschau wird.</p></div>
+<div class="narrow" style="padding-bottom:4rem">
+  <div class="author"><figure class="shot "><img src="../img/nils.webp" loading="lazy" decoding="async" class="on" alt="Nils Rochholl"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure><p><b>Nils Rochholl</b> automatisiert Prozesse für Unternehmen und Systemhäuser. Fragen zum Beitrag? Schreiben Sie mir: hallo@takteins.de</p></div>
+  <div class="post-nav"><a class="more" href="montags-tippe-ich-keine-zahlen-mehr-ab.html">Älterer Beitrag</a><a class="more" href="../blog.html">Alle Beiträge</a></div>
+</div></article>
+<section class="band petrol cta-band" id="taktcheck"><div class="wrap">
+  <div><p class="eyebrow" style="margin-bottom:1rem">Taktcheck</p><h2>15 Minuten, die sich lohnen.</h2></div>
+  <div class="card" style="border-top-color:var(--on-petrol)">
+    <p>Nach unserem Gespräch wissen Sie, wo Sie Zeit verlieren, was sich automatisieren lässt und was es ungefähr kostet. Oder ich sage Ihnen ehrlich, dass es sich nicht lohnt.</p>
+    <ul class="promise"><li>kostenlos, per Video</li><li>ohne Vorbereitung</li><li>kein Verkaufsgespräch</li><li>mit kurzer Notiz danach</li></ul>
+    <div class="cta-row"><a class="btn" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a><a class="more" style="color:var(--on-petrol)" href="../kontakt.html">So läuft der Taktcheck ab</a></div>
+  </div>
+</div></section>
+</main>
+<footer class="site band"><div class="wrap">
+  <div class="brand"><a class="logo" href="../"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><p class="claim">Damit Ihr Betrieb läuft, auch wenn Sie nicht hinschauen.</p></div>
+  <div><h4>Was wir machen</h4><ul><li><a href="../prozesse.html">Prozesse automatisieren</a></li><li><a href="../zahlen.html">Zahlen sichtbar machen</a></li><li><a href="../systemhaeuser.html">Für Systemhäuser</a></li></ul></div>
+  <div><h4>takteins</h4><ul><li><a href="../blog.html">Aus dem Alltag</a></li><li><a href="../ueber-mich.html">Über mich</a></li><li><a href="../kontakt.html">Kontakt</a></li></ul></div>
+  <div><h4>Kontakt</h4><ul><li>hallo@takteins.de</li><li><a href="../impressum.html">Impressum</a></li><li><a href="../datenschutz.html">Datenschutz</a></li></ul></div>
+  <div class="bottom"><span>© 2026 takteins · Nils Rochholl</span><span>Prozesse · Zahlen · TANSS</span></div>
+</div></footer>
+<div class="sticky-cta"><span>15 Min · kostenlos</span><a class="btn" href="https://calendly.com/nilsrochholl/15-minuten-remote" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
