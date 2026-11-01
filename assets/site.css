@@ -699,3 +699,16 @@ nav.main a.cta:hover{background:#4F196F}
 .statement .hgroup{background:linear-gradient(95deg,#3C005F 0%,#764C8F 45%,#00A3B0 100%);-webkit-background-clip:text;background-clip:text;-webkit-box-decoration-break:slice;box-decoration-break:slice}
 .statement .hgroup .w{-webkit-text-fill-color:currentColor}
 .statement .hgroup .w.on{color:transparent;-webkit-text-fill-color:transparent;background:none}
+
+/* Abläufe als kleine Partitur: Notenlinien, Taktstriche, Noten im 4/4-Takt */
+.flowviz .staff{stroke:#2C2834;stroke-width:1;opacity:.9}
+.flowviz .bar{stroke:#3A3544;stroke-width:1.5}
+.flowviz .bar.end{stroke-width:4}
+.flowviz .pulse.eins{filter:drop-shadow(0 0 6px rgba(95,224,232,.7))}
+.flowviz .pulse.h.eins{filter:drop-shadow(0 0 6px rgba(177,153,191,.7))}
+.post-flow .flowviz .staff{stroke:#2C2834}
+
+/* Leistungsstufen: vier Schläge, die Eins (Taktcheck) betont */
+.offers.stufen .offer .bar{display:block;width:4px;height:40px;background:var(--text);border-radius:2px;margin-bottom:.4rem}
+.offers.stufen .offer.featured .bar{background:var(--lila);height:56px}
+.offers.stufen .offer.featured h3{color:var(--lila)}
