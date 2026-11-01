@@ -1,1 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.takteins\.de$ [NC]
+RewriteRule ^(.*)$ https://takteins.de/$1 [R=301,L]
 Redirect 301 /ablaeufe.html /prozesse.html
