@@ -120,7 +120,7 @@
       // Bühne öffnet sich auf volle Breite, Bild zoomt langsam heraus
       document.querySelectorAll('.buehne').forEach(function(b){
         var r = b.getBoundingClientRect(); if (r.height === 0) return;
-        var auf = clamp((h - r.top) / (h * 0.9));          // 0 = kommt rein, 1 = oben angekommen
+        var auf = clamp((h - r.top) / (h * 0.6));          // 0 = kommt rein, 1 = oben angekommen
         var durch = clamp((h - r.top) / (h + r.height));   // Fortschritt über die ganze Strecke
         var rand = Math.min(48, window.innerWidth * 0.05);
         b.style.setProperty('--bi', (rand * (1 - auf)).toFixed(1) + 'px');
