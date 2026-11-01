@@ -712,3 +712,6 @@ nav.main a.cta:hover{background:#4F196F}
 .offers.stufen .offer .bar{display:block;width:4px;height:40px;background:var(--text);border-radius:2px;margin-bottom:.4rem}
 .offers.stufen .offer.featured .bar{background:var(--lila);height:56px}
 .offers.stufen .offer.featured h3{color:var(--lila)}
+
+.story .measure b{color:var(--lila-glow)}
+.story-media figure.screen{padding:clamp(10px,1.6vw,20px)}
