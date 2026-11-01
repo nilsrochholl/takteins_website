@@ -7,6 +7,7 @@
 - Eigener Betrieb (Stand Oktober 2026): 256 produktive n8n-Flows, über 10.000 automatische Abläufe pro Tag, 99,3 % ohne Eingriff
 - Werkzeuge: n8n (selbst gehostet), Grafana, Microsoft 365, TANSS, KI-Bausteine
 - Einstieg: Taktcheck, 15 Minuten, kostenlos, per Video, Buchung über https://calendly.com/nilsrochholl/15-minuten-remote
+- Sitz: Am Wickrather Tor 61, 41179 Mönchengladbach
 - Sprache: Deutsch, Region: Deutschland
 - Kontakt: hallo@takteins.de
 
