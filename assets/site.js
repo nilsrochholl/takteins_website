@@ -40,11 +40,15 @@
     var teile = [];
     [].slice.call(el.childNodes).forEach(function(n){
       var cls = n.nodeType === 1 ? (n.className || '') : '';
-      var txt = n.textContent;
-      txt.split(/(\s+)/).forEach(function(w){
+      // Satzteil mit Verlauf: EIN gemeinsamer Verlauf über alle Wörter
+      var huelle = null;
+      if (/\bh\b/.test(cls)) { huelle = document.createElement('span'); huelle.className = 'hgroup'; teile.push(huelle); cls = ''; }
+      n.textContent.split(/(\s+)/).forEach(function(w){
         if (!w) return;
-        if (/^\s+$/.test(w)) { teile.push(document.createTextNode(w)); return; }
-        var s = document.createElement('span'); s.className = 'w ' + cls; s.textContent = w; teile.push(s);
+        var ziel = huelle || null;
+        if (/^\s+$/.test(w)) { var t = document.createTextNode(w); ziel ? ziel.appendChild(t) : teile.push(t); return; }
+        var s = document.createElement('span'); s.className = 'w ' + cls; s.textContent = w;
+        ziel ? ziel.appendChild(s) : teile.push(s);
       });
     });
     el.textContent = ''; teile.forEach(function(t){ el.appendChild(t); });

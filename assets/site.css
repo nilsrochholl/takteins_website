@@ -631,7 +631,7 @@ html.booking-open{overflow:hidden}
 h1 em,h2 em,.grad{font-style:italic;font-weight:400;background:linear-gradient(95deg,#3C005F 0%,#764C8F 30%,#3B7BD8 65%,#00A3B0 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.06em}
 .hero h1 em,.page-hero h1 em,.dark h2 em,.petrol h2 em,.story h3 em,.grad.light{background-image:linear-gradient(95deg,#C4B2CF 0%,#B199BF 28%,#8FB8F5 60%,#5FE0E8 100%)}
 .lila h2 em,.cta-band h2 em{background-image:linear-gradient(95deg,#FFFFFF 0%,#EBE5EF 45%,#9FF0F5 100%)}
-.statement .w.on.h{background:linear-gradient(95deg,#3C005F,#00A3B0);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.statement .w.on.h-alt{background:linear-gradient(95deg,#3C005F,#00A3B0);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 
 /* Textmarker */
 mark,.hl{color:inherit;background:linear-gradient(100deg,rgba(196,178,207,0) 0%,rgba(196,178,207,.75) 4%,rgba(196,178,207,.75) 96%,rgba(196,178,207,0) 100%) no-repeat 0 92%/100% 66%;padding:0 .14em;border-radius:.2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
@@ -694,3 +694,8 @@ mark,.hl{color:inherit;background:linear-gradient(100deg,rgba(196,178,207,0) 0%,
 .page-hero .btn,.hero .btn,.dark .btn{background:#4F196F;border-color:#4F196F}
 .page-hero .btn:hover,.hero .btn:hover,.dark .btn:hover{background:#63337F;border-color:#63337F}
 nav.main a.cta:hover{background:#4F196F}
+
+/* Ein einziger Verlauf über den ganzen Satzteil */
+.statement .hgroup{background:linear-gradient(95deg,#3C005F 0%,#764C8F 45%,#00A3B0 100%);-webkit-background-clip:text;background-clip:text;-webkit-box-decoration-break:slice;box-decoration-break:slice}
+.statement .hgroup .w{-webkit-text-fill-color:currentColor}
+.statement .hgroup .w.on{color:transparent;-webkit-text-fill-color:transparent;background:none}
