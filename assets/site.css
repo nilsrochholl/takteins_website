@@ -641,3 +641,35 @@ mark,.hl{color:inherit;background:linear-gradient(100deg,rgba(201,166,242,.0) 0%
   .js mark.zieh,.js .hl.zieh{background-size:0% 66%;transition:background-size 1.1s cubic-bezier(.3,.7,.2,1) .15s}
   .js mark.zieh.in,.js .hl.zieh.in{background-size:100% 66%}
 }
+
+/* Seitenwechsel: Seiten blenden ineinander (moderne Browser, ohne JavaScript) */
+@view-transition{navigation:auto}
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:vt-out .28s cubic-bezier(.4,0,.2,1) both}
+  ::view-transition-new(root){animation:vt-in .42s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes vt-out{to{opacity:0;transform:translateY(-8px)}}
+  @keyframes vt-in{from{opacity:0;transform:translateY(12px)}}
+  header.site{view-transition-name:kopf}
+}
+
+/* Handymenü klappt weich auf statt hart einzublenden */
+@media (max-width:960px) and (prefers-reduced-motion:no-preference){
+  nav.main.open{animation:menu-auf .3s cubic-bezier(.2,.7,.2,1) both}
+  nav.main.open a{animation:menu-zeile .4s cubic-bezier(.2,.7,.2,1) both}
+  nav.main.open a:nth-child(2){animation-delay:.03s}nav.main.open a:nth-child(3){animation-delay:.06s}nav.main.open a:nth-child(4){animation-delay:.09s}
+  nav.main.open a:nth-child(5){animation-delay:.12s}nav.main.open a:nth-child(6){animation-delay:.15s}nav.main.open a:nth-child(7){animation-delay:.18s}
+  @keyframes menu-auf{from{opacity:0;transform:translateY(-10px)}}
+  @keyframes menu-zeile{from{opacity:0;transform:translateX(-10px)}}
+}
+
+/* Buchungsfenster schließt genauso weich, wie es aufgeht */
+@media (prefers-reduced-motion:no-preference){
+  dialog.booking.zu{animation:pop-zu .22s cubic-bezier(.4,0,1,1) both}
+  dialog.booking.zu::backdrop{opacity:0;transition:opacity .22s ease}
+  @keyframes pop-zu{to{transform:translateY(14px) scale(.98);opacity:0}}
+}
+
+/* Auf Touch-Geräten gibt es kein Hover: Links zeigen ihre Pfeile dauerhaft, Druck gibt Rückmeldung */
+@media (hover:none){
+  .btn:active,.hero-offers a:active,.post-card:active,nav.main a:active{transform:scale(.98)}
+}

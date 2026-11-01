@@ -145,9 +145,15 @@
     document.body.appendChild(dlg);
     dlg.querySelector('.booking-close').addEventListener('click', schliessen);
     dlg.addEventListener('click', function(e){ if (e.target === dlg) schliessen(); });
+    dlg.addEventListener('cancel', function(e){ e.preventDefault(); schliessen(); });
     dlg.addEventListener('close', function(){ document.documentElement.classList.remove('booking-open'); if (letzterFokus) letzterFokus.focus(); });
   }
-  function schliessen(){ if (dlg && dlg.open) dlg.close(); }
+  function schliessen(){
+    if (!dlg || !dlg.open) return;
+    if (ruhig) { dlg.close(); return; }
+    dlg.classList.add('zu');
+    setTimeout(function(){ dlg.classList.remove('zu'); dlg.close(); }, 220);
+  }
   function oeffnen(url){
     if (!dlg) baueDialog();
     var box = dlg.querySelector('.booking-frame');
