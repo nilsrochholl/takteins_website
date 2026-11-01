@@ -673,3 +673,19 @@ mark,.hl{color:inherit;background:linear-gradient(100deg,rgba(201,166,242,.0) 0%
 @media (hover:none){
   .btn:active,.hero-offers a:active,.post-card:active,nav.main a:active{transform:scale(.98)}
 }
+
+/* Zeitspar-Rechner */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc-copy{display:grid;gap:1.3rem}
+.calc-form{display:grid;gap:1.4rem;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:clamp(1.2rem,3vw,2rem)}
+.slider{display:grid;gap:.6rem}
+.slider span{display:flex;justify-content:space-between;gap:1rem;font-size:.98rem;color:var(--soft)}
+.slider output{font-family:var(--f-display);font-size:1.35rem;color:var(--text);font-variant-numeric:tabular-nums}
+.slider input[type=range]{width:100%;accent-color:var(--lila);height:28px;cursor:pointer}
+.calc-out{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;border-top:1px solid var(--rule);padding-top:1.2rem}
+.calc-out div{display:grid;gap:.15rem}
+.calc-out small{font-size:.8rem;color:var(--muted)}
+.calc-out b{font-family:var(--f-display);font-weight:500;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.calc-out .gain-box{grid-column:1/-1;background:var(--lila-pale);border-radius:10px;padding:.9rem 1rem}
+.calc-out .gain-box b{color:var(--lila-ink);font-size:clamp(2rem,4vw,2.8rem)}

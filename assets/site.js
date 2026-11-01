@@ -179,6 +179,24 @@
     e.preventDefault(); oeffnen(a.href);
   });
 
+
+  // Zeitspar-Rechner
+  var rf = document.getElementById('rechner-form');
+  if (rf) {
+    var eur = function(v){ return Math.round(v).toLocaleString('de-DE') + '\u00a0€'; };
+    var rechne = function(){
+      var p = +document.getElementById('r-p').value, h = +document.getElementById('r-h').value, st = +document.getElementById('r-s').value;
+      var jahr = p * h * 46, kosten = jahr * st;
+      document.getElementById('r-pers').textContent = p;
+      document.getElementById('r-std').textContent = h;
+      document.getElementById('r-satz').textContent = st + '\u00a0€';
+      document.getElementById('r-jahr-h').textContent = jahr.toLocaleString('de-DE') + '\u00a0Std.';
+      document.getElementById('r-jahr-e').textContent = eur(kosten);
+      document.getElementById('r-zurueck').textContent = eur(kosten * 0.6);
+    };
+    rf.addEventListener('input', rechne); rechne();
+  }
+
   // Vorher/Nachher-Regler
   document.querySelectorAll('.compare input[type=range]').forEach(function(r){
     var c=r.closest('.compare');
