@@ -32,6 +32,7 @@
   // ===== Bewegung beim Scrollen =====
   var ruhig = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.documentElement.classList.add('js');
+  if (ruhig) document.querySelectorAll('.buehne').forEach(function(b){ b.classList.add('da'); });
   var vh = function(){ return window.innerHeight || 800; };
   var clamp = function(x){ return Math.max(0, Math.min(1, x)); };
 
@@ -115,6 +116,17 @@
         var r = z.getBoundingClientRect(); if (r.height === 0) return;
         var p = clamp((h - r.top) / (h * 0.8));
         z.style.setProperty('--z', (0.88 + 0.12 * p).toFixed(3));
+      });
+      // Bühne öffnet sich auf volle Breite, Bild zoomt langsam heraus
+      document.querySelectorAll('.buehne').forEach(function(b){
+        var r = b.getBoundingClientRect(); if (r.height === 0) return;
+        var auf = clamp((h - r.top) / (h * 0.9));          // 0 = kommt rein, 1 = oben angekommen
+        var durch = clamp((h - r.top) / (h + r.height));   // Fortschritt über die ganze Strecke
+        var rand = Math.min(48, window.innerWidth * 0.05);
+        b.style.setProperty('--bi', (rand * (1 - auf)).toFixed(1) + 'px');
+        b.style.setProperty('--br', (22 * (1 - auf)).toFixed(1) + 'px');
+        b.style.setProperty('--bz', (1.16 - 0.16 * durch).toFixed(4));
+        if (auf > 0.55) b.classList.add('da');
       });
       document.querySelectorAll('[data-parallax]').forEach(function(img){
         var r = img.parentNode.getBoundingClientRect(); if (r.height === 0) return;

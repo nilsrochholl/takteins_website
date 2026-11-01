@@ -4,7 +4,7 @@
 
 ## Fakten
 - Gründer und Ansprechpartner: Nils Rochholl, seit 2002 selbstständig (erster eigener Kunde mit 15, Jahrgang 1983), führt heute ein IT-Systemhaus
-- Eigener Betrieb (gemessen am 1. November 2026): 256 produktive n8n-Flows, 10.411 automatische Abläufe in 24 Stunden, rund 23 Stunden eingesparte Handarbeit pro Tag (ohne Einmalaktionen), 99,3 % der Abläufe ohne Eingriff
+- Eigener Betrieb (gemessen am 1. November 2026): 256 produktive n8n-Flows, 10.411 automatische Durchläufe in 24 Stunden, rund 23 Stunden eingesparte Handarbeit pro Tag (ohne Einmalaktionen), 99,3 % der Durchläufe ohne Eingriff
 - Werkzeuge: n8n (selbst gehostet), Grafana, Microsoft 365, TANSS, KI-Bausteine
 - Zusammenarbeit in vier Stufen: Taktcheck (15 Minuten, kostenlos) → Auftakt (Bestandsaufnahme und Plan, Festpreis) → Im Takt (Umsetzung, Festpreis je Baustein) → Dauerhaft im Takt (monatliche Betreuung)
 - Einstieg: Taktcheck, 15 Minuten, kostenlos, per Video, Buchung über https://calendly.com/nilsrochholl/15-minuten-remote
@@ -13,7 +13,7 @@
 - Kontakt: hallo@takteins.de
 
 ## Leistungen
-- [Abläufe automatisieren](https://takteins.de/ablaeufe.html): Routinearbeit mit n8n auf eigenem Server, Schnittstellen zu M365, ERP, Shop, Ticketsystem
+- [Prozesse automatisieren](https://takteins.de/prozesse.html): Routinearbeit mit n8n auf eigenem Server, Schnittstellen zu M365, ERP, Shop, Ticketsystem
 - [Zahlen sichtbar machen](https://takteins.de/zahlen.html): tägliche Dashboards aus Warenwirtschaft, Shop und Buchhaltung
 - [Für Systemhäuser](https://takteins.de/systemhaeuser.html): TANSS-Beratung, Leistungsprüfung, KI-Ticketeingang, Monitoring, Chef-Cockpit
 - [Über Nils Rochholl](https://takteins.de/ueber-mich.html)
