@@ -33,6 +33,97 @@
     });
   });
 
+
+  // ===== Auswertung als PDF (Rechner und Selbsttest) =====
+  var basis = (function(){ var s=document.querySelector('script[src*="assets/site.js"]'); return s ? s.getAttribute('src').replace(/assets\/site\.js.*$/,'') : ''; })();
+  function ladePdf(cb){
+    if (window.jspdf) return cb();
+    var s=document.createElement('script'); s.src=basis+'assets/jspdf.umd.min.js'; s.onload=cb;
+    s.onerror=function(){ alert('Das PDF konnte gerade nicht erstellt werden. Bitte später noch einmal versuchen.'); };
+    document.head.appendChild(s);
+  }
+  var IDEEN = {
+    q1:['Zahlen jeden Morgen aktuell','Ein Flow holt Umsatz, Aufträge und offene Posten aus Ihren Systemen und schreibt sie in ein Dashboard, das um 6 Uhr fertig ist.'],
+    q2:['Wissen aus Köpfen in Abläufe holen','Die drei Aufgaben, die nur eine Person kann, werden beschrieben und automatisiert. Urlaub und Krankheit bringen nichts mehr zum Stehen.'],
+    q3:['Schnittstellen statt Abtippen','Daten fließen automatisch zwischen ERP, Shop, Buchhaltung und Microsoft 365. Niemand kopiert mehr von A nach B.'],
+    q4:['Leistungen prüfen, bevor die Rechnung rausgeht','Jede gebuchte Zeit wird gegen Auftrag und Vertrag geprüft. Lücken landen mit Begründung bei der richtigen Person.'],
+    q5:['Frühwarnung statt Feuerwehr','Ein Flow meldet Auffälligkeiten jeden Morgen in einer kurzen Übersicht, bevor Ihre Kunden anrufen.'],
+    angebot:['Angebote nachfassen','Nach sieben Tagen kommt automatisch eine Erinnerung mit fertigem Entwurf. Kein Angebot geht mehr verloren.'],
+    beleg:['Belegfreigabe mit einem Klick','Eingangsrechnungen liegen jeden Morgen in Teams zur Freigabe, mit Buchungsvorschlag für die Buchhaltung.'],
+    dashboard:['Ein Dashboard für das Montagsmeeting','Fünf Kennzahlen, auf die jemand reagiert, jeden Morgen aktuell und mit Quelle.']
+  };
+  function auswertungDaten(art){
+    var d={art:art, datum:new Date().toLocaleDateString('de-DE'), zeilen:[], ideen:[], titel:''};
+    if (art==='rechner'){
+      var g=function(id){var e=document.getElementById(id);return e?e.textContent.replace(/ /g,' '):'';};
+      d.titel='Was kostet Sie die Routine?';
+      d.zeilen=[['Mitarbeitende mit Routinearbeit',g('r-pers')],['Stunden Routine pro Person und Woche',g('r-std')],['Interner Stundensatz',g('r-satz')],
+                ['Routine pro Jahr',g('r-jahr-h')],['Das kostet Sie im Jahr',g('r-jahr-e')],['Davon realistisch zurückholbar',g('r-zurueck')]];
+      d.ideen=[IDEEN.angebot,IDEEN.beleg,IDEEN.dashboard];
+    } else {
+      var q=document.getElementById('quiz'), fd=new FormData(q), nein=[];
+      ['q1','q2','q3','q4','q5'].forEach(function(k){ if(fd.get(k)==='0') nein.push(k); });
+      d.titel='Wie sehr läuft Ihr Betrieb im Takt?';
+      d.zeilen=[['Ergebnis',document.getElementById('quiz-n').textContent],['Einordnung',document.getElementById('quiz-label').textContent],['',document.getElementById('quiz-text').textContent]];
+      nein.forEach(function(k){ if(d.ideen.length<3) d.ideen.push(IDEEN[k]); });
+      [IDEEN.angebot,IDEEN.beleg,IDEEN.dashboard].forEach(function(i){ if(d.ideen.length<3) d.ideen.push(i); });
+    }
+    return d;
+  }
+  function baueDoc(d){
+    var J=window.jspdf.jsPDF, doc=new J({unit:'mm',format:'a4'}), x=20, y=24, w=170;
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(60,0,95); doc.text('takteins',x,y);
+    doc.setFont('helvetica','normal'); doc.setTextColor(120,120,130); doc.setFontSize(9); doc.text('Auswertung vom '+d.datum,190,y,{align:'right'});
+    y+=16; doc.setTextColor(14,12,18); doc.setFont('helvetica','bold'); doc.setFontSize(20); doc.text(doc.splitTextToSize(d.titel,w),x,y); y+=12;
+    doc.setFontSize(11);
+    d.zeilen.forEach(function(z){
+      if(z[0]){ doc.setFont('helvetica','normal'); doc.setTextColor(87,82,95); doc.text(z[0],x,y); doc.setFont('helvetica','bold'); doc.setTextColor(14,12,18); doc.text(String(z[1]),190,y,{align:'right'}); y+=8; }
+      else { doc.setFont('helvetica','normal'); var l=doc.splitTextToSize(z[1],w); doc.text(l,x,y); y+=l.length*5.5+3; }
+    });
+    y+=6; doc.setDrawColor(60,0,95); doc.setLineWidth(.6); doc.line(x,y,190,y); y+=12;
+    doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor(60,0,95); doc.text('Drei Ideen für Ihren Betrieb',x,y); y+=9;
+    d.ideen.forEach(function(i,n){
+      doc.setFont('helvetica','bold'); doc.setFontSize(11.5); doc.setTextColor(14,12,18); doc.text((n+1)+'. '+i[0],x,y); y+=6;
+      doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(87,82,95); var l=doc.splitTextToSize(i[1],w-6); doc.text(l,x+5,y); y+=l.length*5+6;
+    });
+    y+=4; doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(14,12,18); doc.text('Nächster Schritt: der Taktcheck',x,y); y+=6;
+    doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(87,82,95);
+    var l=doc.splitTextToSize('15 Minuten, kostenlos, per Video. Wir schauen auf die Stelle, die Sie am meisten Nerven kostet. Sie gehen mit drei konkreten Ansatzpunkten raus, oder mit der ehrlichen Antwort, dass es sich nicht lohnt.',w); doc.text(l,x,y); y+=l.length*5+4;
+    doc.setTextColor(60,0,95); doc.textWithLink('Jetzt Termin wählen: takteins.de',x,y,{url:'https://takteins.de/kontakt.html'});
+    doc.setFontSize(8.5); doc.setTextColor(140,140,150); doc.text('takteins · Nils Rochholl · Am Wickrather Tor 61 · 41179 Mönchengladbach · hallo@takteins.de',105,285,{align:'center'});
+    return doc;
+  }
+  document.querySelectorAll('form.auswertung').forEach(function(f){
+    var art=f.dataset.art, status=f.querySelector('.aw-status'), mailBox=f.querySelector('.aw-mail');
+    if (window.TK_AUSWERTUNG_URL && mailBox) mailBox.hidden=false;
+    f.querySelector('.aw-laden').addEventListener('click',function(){
+      ladePdf(function(){ baueDoc(auswertungDaten(art)).save('takteins-auswertung.pdf'); status.textContent='Das PDF ist heruntergeladen.'; });
+    });
+    var send=f.querySelector('.aw-senden');
+    if (send) send.addEventListener('click',function(){
+      var mail=f.querySelector('input[name=mail]').value.trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){ status.textContent='Bitte eine gültige E-Mail-Adresse eingeben.'; return; }
+      if(!f.querySelector('input[name=ok]').checked){ status.textContent='Bitte bestätigen Sie, dass wir die Auswertung an diese Adresse schicken dürfen.'; return; }
+      status.textContent='Wird verschickt …'; send.disabled=true;
+      ladePdf(function(){
+        var d=auswertungDaten(art), pdf=baueDoc(d).output('datauristring').split(',')[1];
+        fetch(window.TK_AUSWERTUNG_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({art:art,mail:mail,kontakt:f.querySelector('input[name=kontakt]').checked,daten:d,pdf:pdf,seite:location.href})})
+        .then(function(r){ if(!r.ok) throw 0; status.textContent='Danke! Die Auswertung ist unterwegs. Schauen Sie auch im Spam-Ordner nach.'; })
+        .catch(function(){ status.textContent='Das hat leider nicht geklappt. Laden Sie das PDF oben herunter oder schreiben Sie an hallo@takteins.de.'; send.disabled=false; });
+      });
+    });
+  });
+  // Selbsttest-Ergebnis an die Buchung übergeben
+  var qb=document.getElementById('quiz-buchen');
+  if (qb && document.getElementById('quiz')) {
+    var basisHref=qb.getAttribute('href');
+    document.getElementById('quiz').addEventListener('change',function(){ setTimeout(function(){
+      var n=(document.getElementById('quiz-n').textContent||'').replace('/','-von-');
+      qb.setAttribute('href', basisHref + (basisHref.indexOf('?')>-1?'&':'?') + 'utm_source=website&utm_medium=selbsttest&utm_content=ergebnis-' + encodeURIComponent(n));
+    },0); });
+  }
+
   // Blog-Filter nach Rubrik
   var chips=document.querySelectorAll('.chip[data-filter]');
   chips.forEach(function(c){

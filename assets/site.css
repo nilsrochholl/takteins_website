@@ -763,3 +763,30 @@ dialog.lupe::backdrop{background:rgba(14,12,18,.8)}
 dialog.lupe img{display:block;max-width:none;width:max(100%,1800px);height:auto;margin:auto}
 dialog.lupe .zu{position:fixed;top:16px;right:16px;z-index:2;background:#fff;color:var(--ink);border:0;border-radius:999px;padding:.6rem 1rem;font:inherit;cursor:pointer}
 @media (max-width:700px){.flowshot figcaption{flex-direction:column;gap:.2rem}}
+
+/* ===== Startseite: Zielgruppe, Fallstudie, Passt/Passt nicht, Auswertung ===== */
+.hero .kicker{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lila-glow);margin-bottom:1.1rem}
+.fallstudie{margin-top:clamp(2.5rem,5vw,4rem);padding:clamp(1.4rem,3vw,2.2rem);border:1px solid var(--rule);border-radius:16px;background:var(--mist)}
+.fallstudie .eyebrow{color:var(--lila);margin-bottom:1.2rem}
+.fs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.4rem)}
+.fs-grid b{display:block;font-family:var(--f-display);font-size:1.5rem;font-weight:500;margin-bottom:.4rem}
+.fs-grid p{color:var(--soft);margin:0}
+@media (max-width:800px){.fs-grid{grid-template-columns:1fr}}
+.passt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.5rem,4vw,3rem)}
+.passt h3{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:1rem}
+.passt-ja{padding:clamp(1.4rem,3vw,2rem);border-radius:16px;background:var(--lila-pale)}
+.passt-nein{padding:clamp(1.4rem,3vw,2rem);border-radius:16px;border:1px solid var(--rule)}
+.passt-nein ul{margin:0;padding-left:1.1rem;color:var(--soft);display:grid;gap:.6rem}
+@media (max-width:800px){.passt{grid-template-columns:1fr}}
+.auswertung{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid currentColor;border-top-color:rgba(127,127,127,.3);display:grid;gap:.7rem}
+.auswertung .eyebrow{margin:0}
+.aw-feld{display:grid;gap:.35rem;font-size:.9rem}
+.aw-feld input{font:inherit;padding:.7rem .9rem;border-radius:10px;border:1px solid var(--rule);background:#fff;color:var(--text)}
+.aw-ok{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;line-height:1.4}
+.aw-ok input{margin-top:.2rem}
+.aw-mail{display:grid;gap:.6rem}
+.aw-status:empty{display:none}
+.lila .auswertung a{color:inherit}
+.aw-mail[hidden]{display:none}
+.lila .auswertung .btn{background:#fff;color:var(--lila);border-color:#fff}
+.aw-ok span{flex:1}
