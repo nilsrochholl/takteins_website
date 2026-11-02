@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jahresabschluss vorbereiten automatisiert | takteins · takteins</title>
+<meta name="description" content="Wie unser Autopilot für die Buchhaltung Kontoauszüge zum 31.12. mit SAP abstimmt, Zahlungen ohne Rechnung sucht, Lager gegen Inventur prüft und die Laufkontrolle aller Buchhaltungs-Flows übernimmt.">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffffff'/%3E%3Ctext x='16' y='15' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%230E0C12'%3E1%3C/text%3E%3Ctext x='16' y='28' font-family='Georgia,serif' font-weight='600' font-size='15' text-anchor='middle' fill='%233C005F'%3E1%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="takteins · Aus dem Alltag" href="../feed.xml">
+<link rel="canonical" href="https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="takteins">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Jahresabschluss vorbereiten automatisiert | takteins · takteins">
+<meta property="og:description" content="Wie unser Autopilot für die Buchhaltung Kontoauszüge zum 31.12. mit SAP abstimmt, Zahlungen ohne Rechnung sucht, Lager gegen Inventur prüft und die Laufkontrolle aller Buchhaltungs-Flows übernimmt.">
+<meta property="og:url" content="https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html">
+<meta property="og:image" content="https://takteins.de/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["ProfessionalService", "Organization"], "@id": "https://takteins.de/#takteins", "name": "takteins", "address": {"@type": "PostalAddress", "streetAddress": "Am Wickrather Tor 61", "postalCode": "41179", "addressLocality": "Mönchengladbach", "addressCountry": "DE"}, "url": "https://takteins.de/", "logo": "https://takteins.de/img/og.jpg", "image": "https://takteins.de/img/og.jpg", "email": "hallo@takteins.de", "description": "takteins automatisiert Routinearbeit mit n8n, macht Unternehmenszahlen täglich in Dashboards sichtbar und berät IT-Systemhäuser zu TANSS.", "slogan": "Ihr Betrieb läuft. Auch wenn Sie nicht hinschauen.", "founder": {"@id": "https://takteins.de/#nils"}, "areaServed": {"@type": "Country", "name": "Deutschland"}, "inLanguage": "de", "knowsAbout": ["Prozessautomatisierung", "n8n", "Dashboards", "Grafana", "Kennzahlen", "TANSS", "IT-Systemhaus", "Microsoft 365", "KI im Mittelstand"], "makesOffer": [{"@type": "Offer", "name": "Taktcheck", "description": "15 Minuten, kostenlos, per Video: wo Sie Zeit verlieren, was sich automatisieren lässt, was es kostet.", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Auftakt", "description": "Bestandsaufnahme und Plan mit Festpreis je Baustein."}, {"@type": "Offer", "name": "Im Takt", "description": "Umsetzung von Automatisierungen (n8n), Dashboards (Grafana) und TANSS-Bausteinen, Festpreis je Baustein."}, {"@type": "Offer", "name": "Dauerhaft im Takt", "description": "Monatliche Betreuung: Betrieb, Monitoring, Sicherung, Weiterentwicklung."}]}, {"@type": "Person", "@id": "https://takteins.de/#nils", "name": "Nils Rochholl", "jobTitle": "Gründer von takteins", "birthDate": "1983", "image": "https://takteins.de/img/nils.jpg", "worksFor": {"@id": "https://takteins.de/#takteins"}, "knowsAbout": ["n8n", "TANSS", "IT-Systemhaus", "Automatisierung", "Grafana"]}, {"@type": "WebSite", "@id": "https://takteins.de/#website", "url": "https://takteins.de/", "name": "takteins", "inLanguage": "de", "publisher": {"@id": "https://takteins.de/#takteins"}}, {"@type": "WebPage", "@id": "https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html", "url": "https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html", "name": "Jahresabschluss vorbereiten automatisiert | takteins · takteins", "description": "Wie unser Autopilot für die Buchhaltung Kontoauszüge zum 31.12. mit SAP abstimmt, Zahlungen ohne Rechnung sucht, Lager gegen Inventur prüft und die Laufkontrolle aller Buchhaltungs-Flows übernimmt.", "inLanguage": "de", "isPartOf": {"@id": "https://takteins.de/#website"}, "about": {"@id": "https://takteins.de/#takteins"}}, {"@type": "BlogPosting", "@id": "https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html#beitrag", "headline": "Der Jahresabschluss hat jetzt eine Checkliste, die sich selbst abhakt", "description": "Kurz vor dem Jahresende kommen jedes Jahr dieselben Fragen der Steuerberatung. Wir haben daraus eine Checkliste gemacht, die sich zum großen Teil selbst beantwortet.", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "inLanguage": "de", "author": {"@id": "https://takteins.de/#nils"}, "publisher": {"@id": "https://takteins.de/#takteins"}, "mainEntityOfPage": "https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html", "image": "https://takteins.de/img/blog-buchhaltung.jpg", "articleSection": "Aus dem Cockpit", "wordCount": 667, "timeRequired": "PT3M", "alternativeHeadline": "Jahresabschluss vorbereiten mit Automatisierung: Kontoauszüge, Zahlungen und Inventur gegen SAP prüfen", "keywords": "Jahresabschluss vorbereiten, Buchhaltung automatisieren, Abschlussvorbereitung, SAP Business One Jahresabschluss"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://takteins.de/"}, {"@type": "ListItem", "position": 2, "name": "Aus dem Alltag", "item": "https://takteins.de/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Der Jahresabschluss hat jetzt eine Checkliste, die sich selbst abhakt", "item": "https://takteins.de/blog/autopilot-buchhaltung-jahresabschluss.html"}]}]}</script>
+</head>
+<body>
+<header class="site band"><div class="wrap"><a class="logo" href="../" aria-label="takteins Startseite"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button><nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><a href="../">Start</a><a href="../prozesse.html">Prozesse</a><a href="../zahlen.html">Zahlen</a><a href="../systemhaeuser.html">Systemhäuser</a><a href="../blog.html" aria-current="page">Aus dem Alltag</a><a href="../ueber-mich.html">Über mich</a><a class="cta" href="https://calendly.com/nilsrochholl/takteins-15-minuten-erstgesprach" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></nav></div></header>
+<main id="top">
+<article class="band"><div class="narrow article-head">
+  <div class="meta"><span class="tag">Aus dem Cockpit</span><span>10. Oktober 2026</span><span>3 Min. Lesezeit</span></div><p class="bildtitel">Der Jahresabschluss hat jetzt eine Checkliste, die sich selbst abhakt</p><h1>Jahresabschluss vorbereiten mit Automatisierung: Kontoauszüge, Zahlungen und Inventur gegen SAP prüfen</h1><p class="lead">Kurz vor dem Jahresende kommen jedes Jahr dieselben Fragen der Steuerberatung. Wir haben daraus eine Checkliste gemacht, die sich zum großen Teil selbst beantwortet.</p>
+  <aside class="tldr"><b>Kurz gesagt</b><p>Der „Autopilot Buchhaltung“ in unserem Cockpit besteht aus 8 Teilstrecken mit 143 Knoten. Werktags um 7:20 Uhr gleicht er die Kontoauszüge ab, um 7:30 Uhr wertet er offene Posten und Zahlungen aus und macht Vorschläge. Für den Jahresabschluss führt er je Gesellschaft eine Checkliste und prüft Bankkonten, Eingangsrechnungen, Zahlungen ohne Beleg und Lagerbuchungen gegen SAP. Eine Laufkontrolle zeigt, ob alle Buchhaltungs-Flows laufen. Eine Kontrolle vergleicht die Vorschläge der KI mit dem, was Menschen tatsächlich gebucht haben.</p></aside>
+</div>
+<div class="wrap"><figure class="shot r21"><img src="../img/blog-buchhaltung.webp" fetchpriority="high" decoding="async" class="on" alt="Nils Rochholl am Laptop in einer Lounge"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure></div>
+<div class="narrow prose" style="padding-block:2rem 1rem"><p>Jedes Jahr im Dezember kommt dieselbe Liste von der Steuerberatung. Kontoauszüge zum 31.12.? Offene Posten? Zahlungen ohne Beleg? Inventur? Und jedes Jahr haben wir dieselben Fragen von Hand beantwortet, mit SAP-Abfragen, Excel und viel Suchen. Irgendwann habe ich mich gefragt: Warum beantworten wir eine Liste, die sich jedes Jahr wiederholt, jedes Jahr neu?</p>
+<h2>Einleitung: Die Fragen sind immer gleich</h2>
+<p>Der Jahresabschluss ist kein Hexenwerk, sondern eine Prüfliste. Die Punkte sind jedes Jahr dieselben, nur die Zahlen ändern sich. Genau das ist ideal für eine Automation: Die Maschine prüft, was sich prüfen lässt, und der Mensch schaut nur noch auf die Abweichungen.</p>
+<h2>Was heißt „Jahresabschluss vorbereiten“ in der Praxis?</h2>
+<p>Für uns sind es vor allem diese Punkte, je Gesellschaft:</p>
+<ul>
+<li>Stimmen die <strong>Kontoauszüge zum 31.12.</strong> mit SAP überein?</li>
+<li>Sind alle <strong>Eingangsrechnungen des Jahres</strong> aus dem Belegportal auch in SAP gebucht?</li>
+<li>Gibt es <strong>Zahlungen ohne Rechnung</strong> oder Belege ohne Zahlung zum Stichtag?</li>
+<li>Ist die <strong>Verrechnung zwischen den Gesellschaften</strong> für alle zwölf Monate erledigt?</li>
+<li>Passen die <strong>Lagerbuchungen zur Inventur</strong>?</li>
+<li>Liegen <strong>Inventurliste und Abschlussunterlagen</strong> aus SAP bereit?</li>
+</ul>
+<h2>So machen wir es: ein Autopilot mit acht Teilstrecken</h2>
+<figure class="flowshot"><button type="button" class="lupe-auf" aria-label="Bild vergrößern"><img src="../img/cockpit-autopilot.webp" loading="lazy" decoding="async" class="on" alt="Der Autopilot im Cockpit, nachgebaut mit Beispieldaten: links die Checkliste zum 31.12., rechts Laufkontrolle und der Vergleich KI und Mensch."></button><figcaption>Der Autopilot im Cockpit, nachgebaut mit Beispieldaten: links die Checkliste zum 31.12., rechts Laufkontrolle und der Vergleich KI und Mensch.<span>Zum Vergrößern klicken</span></figcaption></figure>
+<p>Der Autopilot arbeitet nicht nur im Dezember. Das meiste läuft jeden Tag:</p>
+<ol>
+<li><strong>Kontoauszüge, werktags 7:20 Uhr:</strong> Der Flow liest die eingelesenen Auszüge und Umsätze, fragt das Banking-Programm ab und vergleicht beides. Ist das Banking gerade nicht erreichbar, wartet er drei Minuten und versucht es noch einmal.</li>
+<li><strong>Morgenlauf, werktags 7:30 Uhr:</strong> Offene Posten und Zahlungen werden ausgewertet, neue Vorschläge festgehalten. Wer im Cockpit nachschaut, sieht nur die Vorschläge von heute.</li>
+<li><strong>Jahresabschluss:</strong> Für jede Gesellschaft liest der Flow die Checkliste und stellt die SAP-Abfragen zusammen: manuelle Zu- und Abgänge, Inventurbuchungen, Kontenbezeichnungen, Bankkonten. Daraus baut er die Übersicht. Ist die Inventur durch, lassen sich die Unterlagen im Cockpit festschreiben.</li>
+<li><strong>Laufkontrolle:</strong> Ein eigener Teil schaut auf alle überwachten Buchhaltungs-Flows. Was lief in den letzten 24 Stunden, was hängt, welche Belege warten, gab es Buchungsfehler? Das Ergebnis steht als Ampel im Cockpit.</li>
+</ol>
+<figure class="flowshot"><button type="button" class="lupe-auf" aria-label="Bild vergrößern"><img src="../img/n8n-cockpit-autopilot.webp" loading="lazy" decoding="async" class="on" alt="Zwei Teilstrecken des Autopiloten: oben die Ticketprüfung mit Zusammenfassung per KI, unten die Kontrolle „KI und Mensch“."></button><figcaption>Zwei Teilstrecken des Autopiloten: oben die Ticketprüfung mit Zusammenfassung per KI, unten die Kontrolle „KI und Mensch“.<span>Zum Vergrößern klicken</span></figcaption></figure>
+<p>Zwei Teile mag ich besonders. Die <strong>Ticketprüfung</strong> nimmt eine Rechnung aus SAP, liest den Ticketverlauf dazu, sucht Unstimmigkeiten und lässt eine KI das Ergebnis in drei Sätzen zusammenfassen. Und die <strong>Kontrolle „KI und Mensch“</strong> vergleicht die Buchungsvorschläge der letzten 60 Tage mit dem, was in SAP tatsächlich gebucht wurde. So sehen wir schwarz auf weiß, wie gut die Vorschläge sind und wo Menschen anders entscheiden.</p>
+<h2>Drei Praxistipps für Ihren Abschluss</h2>
+<ol>
+<li><strong>Machen Sie aus der Liste der Steuerberatung eine Checkliste.</strong> Jeder Punkt, der sich jedes Jahr wiederholt, ist ein Kandidat für eine automatische Prüfung.</li>
+<li><strong>Prüfen Sie täglich, nicht im Dezember.</strong> Ein Kontoauszug, der jeden Morgen abgeglichen wird, ist am 31.12. kein Thema mehr.</li>
+<li><strong>Kontrollieren Sie die KI.</strong> Wenn eine KI Buchungen vorschlägt, sollte regelmäßig verglichen werden, was daraus wurde. Erst das schafft Vertrauen.</li>
+</ol>
+<h2>Was passiert, wenn Sie nichts tun?</h2>
+<ul>
+<li><strong>Wirtschaftlich:</strong> Der Abschluss dauert länger, die Steuerberatung rechnet mehr Stunden ab.</li>
+<li><strong>Rechtlich:</strong> Unklare Posten zum Stichtag sind genau die Stellen, nach denen bei einer Prüfung gefragt wird.</li>
+<li><strong>Im Team:</strong> Der Dezember wird zum Stressmonat, ausgerechnet dann, wenn alle in den Urlaub wollen.</li>
+</ul>
+<h2>Häufige Fragen</h2>
+<details><summary>Ersetzt das die Steuerberatung?</summary><p>Nein. Die Steuerberatung bekommt bessere Unterlagen, früher und mit weniger Rückfragen. Den Abschluss macht sie weiterhin.</p></details>
+<details><summary>Bucht der Autopilot selbst?</summary><p>Er macht Vorschläge und prüft. Gebucht wird nach Freigabe durch einen Menschen. Wie gut die Vorschläge sind, zeigt die Kontrolle „KI und Mensch“.</p></details>
+<details><summary>Funktioniert das nur mit SAP Business One?</summary><p>Bei uns ja, weil es bei uns im Einsatz ist. Das Prinzip passt auf jede Buchhaltung, die Abfragen über eine Schnittstelle erlaubt.</p></details>
+
+<h2>Fazit</h2>
+<p>Der Jahresabschluss ist bei uns keine Suchaktion mehr, sondern eine Checkliste, die sich zum großen Teil selbst abhakt. Die Maschine prüft jeden Tag, der Mensch schaut auf die Abweichungen. Und im Dezember bleibt tatsächlich Zeit für den Urlaub.</p>
+<p>Wie läuft der Abschluss bei Ihnen? Im Taktcheck schauen wir, welche Punkte Ihrer Liste sich automatisch prüfen lassen.</p></div>
+<div class="narrow" style="padding-bottom:4rem">
+  <div class="author"><figure class="shot "><img src="../img/nils.webp" loading="lazy" decoding="async" class="on" alt="Nils Rochholl"><div class="ph"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span></div></figure><p><b>Nils Rochholl</b> automatisiert Prozesse für Unternehmen und Systemhäuser. Fragen zum Beitrag? Schreiben Sie mir: hallo@takteins.de</p></div>
+  <div class="post-nav"><a class="more" href="die-dispo-hat-keinen-zettel-mehr.html">Älterer Beitrag</a><a class="more" href="../blog.html">Alle Beiträge</a></div>
+</div></article>
+<section class="band petrol cta-band" id="taktcheck"><div class="wrap">
+  <div><p class="eyebrow" style="margin-bottom:1rem">Taktcheck</p><h2>15 Minuten, die sich lohnen.</h2></div>
+  <div class="card" style="border-top-color:var(--on-petrol)">
+    <p>Nach unserem Gespräch wissen Sie, wo Sie Zeit verlieren, was sich automatisieren lässt und was es ungefähr kostet. Oder ich sage Ihnen ehrlich, dass es sich nicht lohnt.</p>
+    <ul class="promise"><li>kostenlos, per Video</li><li>ohne Vorbereitung</li><li>kein Verkaufsgespräch</li><li>mit kurzer Notiz danach</li></ul>
+    <div class="cta-row"><a class="btn" href="https://calendly.com/nilsrochholl/takteins-15-minuten-erstgesprach" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a><a class="more" style="color:var(--on-petrol)" href="../kontakt.html">So läuft der Taktcheck ab</a></div>
+  </div>
+</div></section>
+</main>
+<footer class="site band"><div class="wrap">
+  <div class="brand"><a class="logo" href="../"><span class="ts" aria-hidden="true"><span>1</span><span>1</span></span>takteins</a><p class="claim">Damit Ihr Betrieb läuft, auch wenn Sie nicht hinschauen.</p></div>
+  <div><h4>Was wir machen</h4><ul><li><a href="../prozesse.html">Prozesse automatisieren</a></li><li><a href="../zahlen.html">Zahlen sichtbar machen</a></li><li><a href="../systemhaeuser.html">Für Systemhäuser</a></li></ul></div>
+  <div><h4>takteins</h4><ul><li><a href="../blog.html">Aus dem Alltag</a></li><li><a href="../ueber-mich.html">Über mich</a></li><li><a href="../kontakt.html">Kontakt</a></li></ul></div>
+  <div><h4>Kontakt</h4><ul><li>hallo@takteins.de</li><li><a href="../impressum.html">Impressum</a></li><li><a href="../datenschutz.html">Datenschutz</a></li></ul></div>
+  <div class="bottom"><span>© 2026 takteins · Nils Rochholl</span><span>Prozesse · Zahlen · TANSS</span></div>
+</div></footer>
+<div class="sticky-cta"><span>15 Min · kostenlos</span><a class="btn" href="https://calendly.com/nilsrochholl/takteins-15-minuten-erstgesprach" data-buchen target="_blank" rel="noopener">Taktcheck buchen</a></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
