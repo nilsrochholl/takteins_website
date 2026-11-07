@@ -16,11 +16,21 @@
 - [Prozesse automatisieren](https://takteins.de/prozesse.html): Routinearbeit mit n8n auf eigenem Server, Schnittstellen zu M365, ERP, Shop, Ticketsystem
 - [Zahlen sichtbar machen](https://takteins.de/zahlen.html): tägliche Dashboards aus Warenwirtschaft, Shop und Buchhaltung
 - [Für Systemhäuser](https://takteins.de/systemhaeuser.html): TANSS-Beratung, Leistungsprüfung, KI-Ticketeingang, Monitoring, Chef-Cockpit
+- [Für Handel und Hersteller](https://takteins.de/handel.html): tägliche Zahlen aus Warenwirtschaft und Shop, Bestellungen ohne Abtippen, Lager und Nachbestellung, Belege
+- [n8n-Betreuung](https://takteins.de/n8n-betreuung.html): Betrieb, Sicherung, Überwachung und Weiterentwicklung bestehender n8n-Installationen
+- [Eingangsrechnungen automatisieren](https://takteins.de/eingangsrechnungen-automatisieren.html): Freigabe in Teams, KI-Buchungsvorschlag, Buchung ohne Abtippen
+- [Angebote automatisch nachfassen](https://takteins.de/angebote-nachfassen.html): Erinnerung mit fertigem Entwurf nach sieben Tagen
+- [Chef-Dashboard](https://takteins.de/chef-dashboard.html): Lage, Liquidität und Kennzahlen jeden Morgen
+- [Post und Scans zuordnen](https://takteins.de/dokumente-zuordnen.html): Dokumente lesen, benennen und dem richtigen Vorgang zuordnen
+- [Fallstudien](https://takteins.de/blog.html#fallstudien): Berichte aus dem eigenen Betrieb mit gemessenen Zahlen
 - [Für Handwerksbetriebe](https://takteins.de/handwerk.html): Anfragen bündeln, Angebote nachfassen, Stundenzettel und Baustellenfotos zuordnen, Rechnungen schneller raus, Wartungen erinnern
 - [Über Nils Rochholl](https://takteins.de/ueber-mich.html)
 - [Taktcheck buchen](https://takteins.de/kontakt.html)
 
 ## Blog „Aus dem Alltag“
+- [Ein Dachdecker wechselt die Software. Ohne eine einzige Excel-Liste.](https://takteins.de/blog/dachdecker-wechselt-software-ohne-excel.html): Die alte Software hatte keine Schnittstelle, der Wechsel drohte zur Excel-Schlacht zu werden. Heute zieht H&L Bedachungen direkt aus der Datenbank um, und Angebote entstehen aus dem Drohnenaufmaß.
+- [Der Einkauf sieht jeden Morgen, was die Früchte kosten](https://takteins.de/blog/einkauf-sieht-jeden-morgen-die-rohstoffpreise.html): Preise, Ernten, Wetter, Währungen: Im Einkauf eines Getränkeherstellers lag alles in verstreuten Quellen. Heute steht es zweimal am Tag auf einem Bildschirm, mit einem kurzen Lagebild obendrauf.
+- [Die Warenwirtschaft hatte keine Datenbank. Die Zahlen gibt es trotzdem.](https://takteins.de/blog/warenwirtschaft-ohne-datenbank-lesbar-gemacht.html): Ein Fachhandel wollte KI an seine Warenwirtschaft anbinden. Erst stellte sich heraus: Die hat gar keine Datenbank. Heute sind 16 Jahre Verkäufe lesbar, Artikel für Artikel geprüft.
 - [Ein Bildschirm statt zwölf Programme](https://takteins.de/blog/unser-cockpit-ein-bildschirm-statt-zwoelf-programme.html): SAP-Client, TANSS, Banking, Belegportal, Excel. Früher brauchte ich für einen normalen Vormittag ein Dutzend Fenster. Heute öffne ich eins. Hier zeige ich, wie unser Cockpit aufgebaut ist.
 - [Über 250 Flows. Was ich dabei gelernt habe.](https://takteins.de/blog/ueber-250-flows-was-ich-gelernt-habe.html): Bei uns laufen über 250 Flows, jeden Tag rund 10.000 Mal. Hier ist, was ich dabei gelernt habe – inklusive der Fehler, die ich nicht noch einmal machen würde.
 - [Ich klicke nur noch auf „Ja“](https://takteins.de/blog/ich-klicke-nur-noch-auf-ja.html): Social Media war bei uns lange das Thema, das immer hinten runterfiel. Heute schlägt eine Maschine vor, ich gebe frei – und der Rest passiert von allein.

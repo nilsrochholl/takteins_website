@@ -86,8 +86,14 @@ nav.main a.cta:hover{background:var(--lila-ink);color:#fff}
 nav.main .dd-menu a{padding:.55rem .75rem;border:none;border-radius:8px;color:var(--soft)}
 nav.main .dd-menu a:hover{background:var(--mist);color:var(--text)}
 nav.main .dd-menu a[aria-current="page"]{color:var(--text);background:var(--lila-pale)}
+.dd-gruppe{display:block;margin:.6rem .75rem .2rem;padding-top:.6rem;border-top:1px solid var(--rule);font:500 .66rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dd-menu{min-width:15rem}
 @media (max-width:960px){
-  .dd-btn{display:none}
+  .dd-btn{pointer-events:none;width:100%;padding:1.2rem 0 .3rem;border:none;font:500 .7rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .dd-btn::after{content:none}
+  .dd.aktiv .dd-btn{color:var(--muted)}
+  .dd-gruppe{margin:.9rem 0 0;padding:0 0 .3rem;border:none}
+  nav.main .dd-menu a{padding-left:.9rem}
   .dd-menu,.dd.open .dd-menu{display:flex;flex-direction:column;position:static;min-width:0;border:none;border-radius:0;padding:0;box-shadow:none;background:none}
   .dd-menu::before{content:none}
   nav.main .dd-menu a{padding:.9rem 0;border-radius:0;border-bottom:1px solid var(--rule);color:var(--soft)}
@@ -97,7 +103,7 @@ nav.main .dd-menu a[aria-current="page"]{color:var(--text);background:var(--lila
 @media (max-width:960px){
   .menu-btn{display:inline-flex}
   nav.main{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--rule);padding:.5rem max(20px,env(safe-area-inset-right,0px)) 1.2rem max(20px,env(safe-area-inset-left,0px))}
-  nav.main.open{display:flex}
+  nav.main.open{display:flex;max-height:calc(100dvh - 4.5rem);overflow-y:auto;overscroll-behavior:contain}
   nav.main a{padding:.9rem 0;border-bottom:1px solid var(--rule);font-size:1.1rem}
   nav.main a.cta{margin-top:1rem;text-align:center;padding:.9rem}
 }
@@ -390,6 +396,16 @@ ul.promise li::before{content:"";width:.85em;height:.45em;border-left:2px solid 
 .meta{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em}
 .tag{color:var(--lila);text-transform:uppercase;letter-spacing:.12em}
 .badge{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;padding:.15rem .45rem;background:var(--lila-pale);color:var(--lila-ink)}
+.badge.fall{background:var(--lila);color:#fff}
+.chips-2{margin-top:.6rem}
+.chips-2 .chip{background:var(--mist)}
+.chips-2 .chip[aria-pressed="true"]{background:var(--lila);color:#fff}
+.bezug{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.8rem;margin-top:3rem}
+.bezug a{display:grid;gap:.2rem;padding:1rem 1.2rem;border:1px solid var(--rule);border-left:3px solid var(--lila);text-decoration:none;background:#fff;transition:background .2s}
+.bezug a:hover{background:var(--mist)}
+.bezug small{font:500 .7rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.bezug b{font-family:var(--f-display);font-weight:500;font-size:1.15rem;letter-spacing:-.01em}
+.bezug b::after{content:" →";color:var(--lila)}
 .has-video{display:inline-flex;align-items:center;gap:.35rem}
 .has-video::before{content:"";border-left:7px solid currentColor;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
 @media (max-width:900px){.posts{grid-template-columns:1fr 1fr}}
@@ -431,7 +447,7 @@ ul.promise li::before{content:"";width:.85em;height:.45em;border-left:2px solid 
 
 /* Fuß */
 footer.site{background:var(--ink);color:#fff}
-footer.site .wrap{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:2.5rem;padding-block:4rem 2rem}
+footer.site .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr));gap:2.5rem;padding-block:4rem 2rem}
 footer.site .logo{font-size:2.2rem}
 footer.site h4{margin:0 0 .8rem;font:500 .72rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:#8E879A}
 footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
