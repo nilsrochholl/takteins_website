@@ -72,6 +72,28 @@ nav.main a[aria-current="page"]{color:var(--text);border-bottom-color:var(--lila
 nav.main a.cta{color:#fff;background:var(--lila);padding:.55rem 1.05rem;border-radius:999px;border:none;font-weight:500}
 nav.main a.cta:hover{background:var(--lila-ink);color:#fff}
 .menu-btn{display:none;font:500 .9rem var(--f-body);background:none;border:1px solid var(--rule);color:var(--text);padding:.45rem .9rem;border-radius:999px;cursor:pointer}
+/* Aufklappmenü „Branchen“ */
+.dd{position:relative}
+.dd-btn{font:inherit;background:none;border:none;border-bottom:2px solid transparent;color:var(--soft);padding:.25rem 0;cursor:pointer;display:inline-flex;align-items:center;gap:.4em}
+.dd-btn::after{content:"";width:.42em;height:.42em;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-.15em) rotate(45deg);transition:transform .2s}
+.dd-btn:hover,.dd.open .dd-btn{color:var(--text)}
+.dd.aktiv .dd-btn{color:var(--text);border-bottom-color:var(--lila)}
+.dd.open .dd-btn::after{transform:translateY(.1em) rotate(-135deg)}
+.dd-menu{display:none;position:absolute;left:-1rem;top:calc(100% + .6rem);min-width:13rem;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:.5rem;box-shadow:0 12px 32px rgba(14,12,18,.1)}
+.dd-menu::before{content:"";position:absolute;left:0;right:0;top:-.7rem;height:.7rem}
+.dd.open .dd-menu{display:flex;flex-direction:column}
+@media (hover:hover) and (min-width:961px){.dd:hover .dd-menu{display:flex;flex-direction:column}}
+nav.main .dd-menu a{padding:.55rem .75rem;border:none;border-radius:8px;color:var(--soft)}
+nav.main .dd-menu a:hover{background:var(--mist);color:var(--text)}
+nav.main .dd-menu a[aria-current="page"]{color:var(--text);background:var(--lila-pale)}
+@media (max-width:960px){
+  .dd-btn{display:none}
+  .dd-menu,.dd.open .dd-menu{display:flex;flex-direction:column;position:static;min-width:0;border:none;border-radius:0;padding:0;box-shadow:none;background:none}
+  .dd-menu::before{content:none}
+  nav.main .dd-menu a{padding:.9rem 0;border-radius:0;border-bottom:1px solid var(--rule);color:var(--soft)}
+  nav.main .dd-menu a:hover{background:none}
+  nav.main .dd-menu a[aria-current="page"]{background:none;color:var(--text)}
+}
 @media (max-width:960px){
   .menu-btn{display:inline-flex}
   nav.main{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--rule);padding:.5rem max(20px,env(safe-area-inset-right,0px)) 1.2rem max(20px,env(safe-area-inset-left,0px))}

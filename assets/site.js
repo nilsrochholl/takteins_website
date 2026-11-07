@@ -9,6 +9,15 @@
   // Menü auf dem Handy
   var btn=document.querySelector('.menu-btn'), nav=document.querySelector('nav.main');
   if(btn&&nav){btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');btn.textContent=o?'Schließen':'Menü';});}
+  // Aufklappmenü „Branchen“: Klick/Tippen öffnet, Klick daneben oder Escape schließt
+  document.querySelectorAll('.dd').forEach(function(dd){
+    var b=dd.querySelector('.dd-btn');
+    function setze(o){dd.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+    b.addEventListener('click',function(e){e.stopPropagation();setze(!dd.classList.contains('open'));});
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))setze(false);});
+    dd.addEventListener('keydown',function(e){if(e.key==='Escape'){setze(false);b.focus();}});
+    dd.addEventListener('focusout',function(e){if(!dd.contains(e.relatedTarget))setze(false);});
+  });
 
   // E-Mail-Adresse kopieren
   document.querySelectorAll('[data-copy]').forEach(function(b){
@@ -316,6 +325,25 @@
       document.getElementById('r-zurueck').textContent = eur(kosten * 0.6);
     };
     rf.addEventListener('input', rechne); rechne();
+  }
+
+  // Handwerks-Rechner: Feierabende und Geld, das beim Kunden liegt
+  var hw = document.getElementById('hw-form');
+  if (hw) {
+    var eur2 = function(v){ return Math.round(v).toLocaleString('de-DE') + '\u00a0€'; };
+    var w = function(id){ return +document.getElementById(id).value; };
+    var hwRechne = function(){
+      var abend = w('hw-a'), tage = w('hw-t'), umsatz = w('hw-u') * 1000;
+      var stunden = abend * 46, abende = Math.round(stunden / 3);
+      var liegt = umsatz * 12 / 365 * tage, frei = umsatz * 12 / 365 * Math.max(tage - 3, 0);
+      document.getElementById('hw-abend').textContent = abend + '\u00a0Std.';
+      document.getElementById('hw-tage').textContent = tage + '\u00a0Tage';
+      document.getElementById('hw-umsatz').textContent = eur2(umsatz);
+      document.getElementById('hw-stunden').textContent = abende.toLocaleString('de-DE') + '\u00a0Abende';
+      document.getElementById('hw-liegt').textContent = eur2(liegt);
+      document.getElementById('hw-frei').textContent = eur2(frei);
+    };
+    hw.addEventListener('input', hwRechne); hwRechne();
   }
 
   // Vorher/Nachher-Regler

@@ -16,6 +16,7 @@
 - [Prozesse automatisieren](https://takteins.de/prozesse.html): Routinearbeit mit n8n auf eigenem Server, Schnittstellen zu M365, ERP, Shop, Ticketsystem
 - [Zahlen sichtbar machen](https://takteins.de/zahlen.html): tägliche Dashboards aus Warenwirtschaft, Shop und Buchhaltung
 - [Für Systemhäuser](https://takteins.de/systemhaeuser.html): TANSS-Beratung, Leistungsprüfung, KI-Ticketeingang, Monitoring, Chef-Cockpit
+- [Für Handwerksbetriebe](https://takteins.de/handwerk.html): Anfragen bündeln, Angebote nachfassen, Stundenzettel und Baustellenfotos zuordnen, Rechnungen schneller raus, Wartungen erinnern
 - [Über Nils Rochholl](https://takteins.de/ueber-mich.html)
 - [Taktcheck buchen](https://takteins.de/kontakt.html)
 
